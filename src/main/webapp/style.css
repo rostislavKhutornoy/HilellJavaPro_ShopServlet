@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    background-color: #222226;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+ul a {
+    font-weight: bold;
+    display: inline;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #222226;
+    color: #666666;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .1),
+                 2px 2px 6px rgba(0, 0, 0, .8);
+    margin-right: 20px;
+}
+
+ul a:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .1),
+                inset 2px 2px 6px rgba(0, 0, 0, .8);
+}
+
+ul a:last-child {
+    margin-right: 0;
+}
+
+ul {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+#orderForm {
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    vertical-align: center;
+    width: 100%;
+    height: 10%;
+}
+
+#orderForm form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: center;
+    margin: 0;
+}
+
+#orderForm p {
+    margin: 20 auto;
+    margin-right: 20px;
+}
+
+#orderForm input {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #222226;
+    padding: 0 10px;
+    color: #fff;
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .1),
+                inset 2px 2px 6px rgba(0, 0, 0, .8);
+}
+
+.task2 #orderForm p {
+    width: 30px;
+}
+
+#orderForm input[type="submit"] {
+    color: #666666;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .1),
+                 2px 2px 6px rgba(0, 0, 0, .8);
+}
+
+#orderForm input[type="submit"]:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .1),
+                inset 2px 2px 6px rgba(0, 0, 0, .8);
+}
+
+#table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#table table {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .1),
+    2px 2px 6px rgba(0, 0, 0, .8);
+    font-weight: bold;
+    color: #666666;
+}
+
+#table td {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+}
+
+#message {
+    margin: 0 auto;
+    width: 20%;
+    color: #548803;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .1),
+    2px 2px 6px rgba(0, 0, 0, .8);
+}

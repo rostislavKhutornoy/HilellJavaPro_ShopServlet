@@ -1,0 +1,9 @@
+<ul>
+    <a href="/HilellJavaPro_ShopServlet_war_exploded/">Main</a>
+    <a href="/HilellJavaPro_ShopServlet_war_exploded/orderInfo">Task 1</a>
+    <a href="/HilellJavaPro_ShopServlet_war_exploded/ordersSumNotExceedingAndDifferentProducts">Task 2</a>
+    <a href="/HilellJavaPro_ShopServlet_war_exploded/ordersHaveDefinedProduct">Task 3</a>
+    <a href="/HilellJavaPro_ShopServlet_war_exploded/ordersHaventDefinedProductIncomingToday">Task 4</a>
+    <a href="/HilellJavaPro_ShopServlet_war_exploded/newOrderFromOrderedToday">Task 5</a>
+    <a href="/HilellJavaPro_ShopServlet_war_exploded/deleteOrderWithDefinedProduct">Task 6</a>
+</ul>
