@@ -34,8 +34,8 @@ public class ShopService {
         return orderNumbersToOrder(orderRepository.newOrderFromOrderedToday());
     }
 
-    public void deleteOrderWithDefinedProduct(String productName, int amount) {
-        orderRepository.deleteOrderWithDefinedProduct(productName, amount);
+    public boolean deleteOrderWithDefinedProduct(String productName, int amount) {
+        return orderRepository.deleteOrderWithDefinedProduct(productName, amount);
     }
 
     private List<Order> orderNumbersToOrder(List<Integer> orderNumbers) {

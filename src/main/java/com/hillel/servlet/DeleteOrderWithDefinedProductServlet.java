@@ -24,9 +24,9 @@ public class DeleteOrderWithDefinedProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        shopService.deleteOrderWithDefinedProduct(req.getParameter("productName"),
+        boolean result = shopService.deleteOrderWithDefinedProduct(req.getParameter("productName"),
                 Integer.parseInt(req.getParameter("amount")));
-        req.setAttribute("message", "Successful delete");
+        req.setAttribute("result", result);
         req.getRequestDispatcher("/jsp/deleteOrderWithDefinedProduct.jsp").forward(req, resp);
     }
 }

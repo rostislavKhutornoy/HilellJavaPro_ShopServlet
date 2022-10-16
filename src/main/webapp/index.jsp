@@ -4,6 +4,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<c:import url="/jspf/header.jspf" />
+<%@ include file="/jspf/header.jspf" %>
 </body>
 </html>

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<c:import url="/jspf/header.jspf" />
+<%@ include file="/jspf/header.jspf" %>
+
 <div id="orderForm" class="task2">
     <form method="post" action="/HilellJavaPro_ShopServlet_war_exploded/ordersSumNotExceedingAndDifferentProducts">
         <p><input type="text" name="sum" placeholder="Enter max total cost"></p>

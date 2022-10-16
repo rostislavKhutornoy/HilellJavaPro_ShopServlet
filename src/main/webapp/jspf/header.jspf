@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <ul>
     <a href="/HilellJavaPro_ShopServlet_war_exploded/">Main</a>
     <a href="/HilellJavaPro_ShopServlet_war_exploded/orderInfo">Task 1</a>
@@ -6,4 +8,12 @@
     <a href="/HilellJavaPro_ShopServlet_war_exploded/ordersHaventDefinedProductIncomingToday">Task 4</a>
     <a href="/HilellJavaPro_ShopServlet_war_exploded/newOrderFromOrderedToday">Task 5</a>
     <a href="/HilellJavaPro_ShopServlet_war_exploded/deleteOrderWithDefinedProduct">Task 6</a>
+    <c:choose>
+        <c:when test="${not empty user}">
+            <p>${user.name}</p> <a href="/HilellJavaPro_ShopServlet_war_exploded/logout">Logout</a>
+        </c:when>
+        <c:otherwise>
+            <a href="/HilellJavaPro_ShopServlet_war_exploded/login">Login</a>
+        </c:otherwise>
+    </c:choose>
 </ul>

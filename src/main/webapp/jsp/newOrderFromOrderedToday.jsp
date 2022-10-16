@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<c:import url="/jspf/header.jspf" />
+<%@ include file="/jspf/header.jspf" %>
+
 <div id="orderForm">
     <form method="post" action="/HilellJavaPro_ShopServlet_war_exploded/newOrderFromOrderedToday">
         <p><input value="Make new order" type="submit"></p>
@@ -36,5 +37,10 @@
         </table>
     </c:if>
 </div>
+<c:if test="${not empty errorMessage}">
+    <p id="message">
+        ${errorMessage}
+    </p>
+</c:if>
 </body>
 </html>

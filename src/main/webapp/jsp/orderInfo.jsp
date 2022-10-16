@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<c:import url="/jspf/header.jspf" />
+<%@ include file="/jspf/header.jspf" %>
+
 <div id="orderForm">
     <form method="post" action="/HilellJavaPro_ShopServlet_war_exploded/orderInfo">
         <p><input type="text" name="orderNumber" placeholder="Enter order number"></p>

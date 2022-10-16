@@ -174,7 +174,7 @@ public class OrderRepository {
         return List.of(finalNewOrderNumber);
     }
 
-    public void deleteOrderWithDefinedProduct(String productName, int amount) {
+    public boolean deleteOrderWithDefinedProduct(String productName, int amount) {
         List<Integer> ordersNumberToDelete = getListOrderNumbersDataBaseQuery(DELETE_ORDER_WITH_DEFINED_PRODUCT,
                 (preparedStatement, resultSet) -> {
                     preparedStatement.setString(1, productName);
@@ -194,6 +194,7 @@ public class OrderRepository {
                 preparedStatement.setInt(1, orderNumbers);
             });
         }
+        return ordersNumberToDelete.size() != 0;
     }
 
     public List<Integer> getTodayOrders() {

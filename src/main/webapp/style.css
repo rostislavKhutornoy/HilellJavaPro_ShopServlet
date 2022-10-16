@@ -38,6 +38,14 @@ ul {
     padding: 0;
 }
 
+ul p {
+    position: relative;
+    margin: 0 20px 0 0;
+    color: #666666;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
 #orderForm {
     display: flex;
     margin: 50px auto;
