@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
         Optional<User> found = userService.findByNameAndPassword(name, password);
 
         if (found.isEmpty()) {
-            request.setAttribute("errorMessage", "Invalid user name/password");
+            request.setAttribute("errorMessage", true);
             request.getRequestDispatcher("/jsp/login.jsp").forward(request, response);
         } else {
             request.getSession().setAttribute("user", found.get());

@@ -11,7 +11,7 @@
 
 <div id="orderForm">
     <form method="post" action="/HilellJavaPro_ShopServlet_war_exploded/newOrderFromOrderedToday">
-        <p><input value="Make new order" type="submit"></p>
+        <p><input value="<fmt:message key="newOrderFromOrderedToday.form.submit.placeholder"/>" type="submit"></p>
     </form>
 </div>
 <div id="table">
@@ -37,9 +37,9 @@
         </table>
     </c:if>
 </div>
-<c:if test="${not empty errorMessage}">
+<c:if test="${errorMessage eq true}">
     <p id="message">
-        ${errorMessage}
+        <fmt:message key="errorChangeDataBaseMessage"/>
     </p>
 </c:if>
 </body>

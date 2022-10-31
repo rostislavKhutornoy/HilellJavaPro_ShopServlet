@@ -12,9 +12,9 @@
 
 <div id="orderForm" class="task2">
     <form method="post" action="/HilellJavaPro_ShopServlet_war_exploded/ordersSumNotExceedingAndDifferentProducts">
-        <p><input type="text" name="sum" placeholder="Enter max total cost"></p>
-        <p><input type="text" name="differentProducts" placeholder="Quantity different products"></p>
-        <p><input value="Search" type="submit"></p>
+        <p><input type="text" name="sum" placeholder="<fmt:message key="ordersSumNotExceedingAndDifferentProducts.form.input.placeholder.maxCost"/>"></p>
+        <p><input type="text" name="differentProducts" placeholder="<fmt:message key="ordersSumNotExceedingAndDifferentProducts.form.input.placeholder.quantity"/>"></p>
+        <p><input value="<fmt:message key="form.search"/>" type="submit"></p>
     </form>
 </div>
 <div id="table">

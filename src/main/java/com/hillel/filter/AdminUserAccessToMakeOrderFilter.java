@@ -28,8 +28,7 @@ public class AdminUserAccessToMakeOrderFilter extends HttpFilter implements Filt
             if (nonNull(user) && UserRole.ADMIN == user.getUserRole()) {
                 chain.doFilter(request, response);
             } else {
-                httpRequest.setAttribute("errorMessage",
-                        "Non-authorized user with non-admin role not allowed to make new order");
+                httpRequest.setAttribute("errorMessage", true);
                 httpRequest.getRequestDispatcher("/jsp/newOrderFromOrderedToday.jsp")
                         .forward(httpRequest, response);
             }

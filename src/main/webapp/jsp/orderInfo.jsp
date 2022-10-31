@@ -11,8 +11,8 @@
 
 <div id="orderForm">
     <form method="post" action="/HilellJavaPro_ShopServlet_war_exploded/orderInfo">
-        <p><input type="text" name="orderNumber" placeholder="Enter order number"></p>
-        <p><input value="Search" type="submit"></p>
+        <p><input type="text" name="orderNumber" placeholder="<fmt:message key="orderInfo.form.input.placeholder"/>"></p>
+        <p><input value="<fmt:message key="form.search"/>" type="submit"></p>
     </form>
 </div>
 <div id="table">

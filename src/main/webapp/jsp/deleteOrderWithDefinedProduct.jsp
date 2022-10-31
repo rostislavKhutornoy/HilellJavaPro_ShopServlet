@@ -11,9 +11,9 @@
 
 <div id="orderForm" class="task2">
     <form method="post" action="/HilellJavaPro_ShopServlet_war_exploded/deleteOrderWithDefinedProduct">
-        <p><input type="text" name="productName" placeholder="Enter product name"></p>
-        <p><input type="text" name="amount" placeholder="Enter amount"></p>
-        <p><input value="Delete" type="submit"></p>
+        <p><input type="text" name="productName" placeholder="<fmt:message key="deleteOrderWithDefinedProduct.form.input.placeholder.productName"/>"></p>
+        <p><input type="text" name="amount" placeholder="<fmt:message key="deleteOrderWithDefinedProduct.form.input.placeholder.amount"/>"></p>
+        <p><input value="<fmt:message key="deleteOrderWithDefinedProduct.form.submit.placeholder"/>" type="submit"></p>
     </form>
 </div>
 <c:if test="${not empty paramValues}">
@@ -21,15 +21,15 @@
     <c:if test="${not empty result}">
         <c:choose>
             <c:when test="${result eq true}">
-                Successfully deleted
+                <fmt:message key="deleteOrderWithDefinedProduct.successfullyDelete"/>
             </c:when>
             <c:otherwise>
-                Nothing to delete
+                <fmt:message key="deleteOrderWithDefinedProduct.nothingToDelete"/>
             </c:otherwise>
         </c:choose>
     </c:if>
-    <c:if test="${not empty errorMessage}">
-        ${errorMessage}
+    <c:if test="${errorMessage eq true}">
+        <fmt:message key="errorChangeDataBaseMessage"/>
     </c:if>
 </p>
 </c:if>

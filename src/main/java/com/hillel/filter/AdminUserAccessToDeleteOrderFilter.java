@@ -28,8 +28,7 @@ public class AdminUserAccessToDeleteOrderFilter extends HttpFilter implements Fi
             if (nonNull(user) && UserRole.ADMIN == user.getUserRole()) {
                 chain.doFilter(request, response);
             } else {
-                httpRequest.setAttribute("errorMessage",
-                        "Non-authorized user with non-admin role not allowed to access delete");
+                httpRequest.setAttribute("errorMessage", true);
                 httpRequest.getRequestDispatcher("/jsp/deleteOrderWithDefinedProduct.jsp")
                         .forward(httpRequest, response);
             }
